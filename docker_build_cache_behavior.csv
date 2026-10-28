@@ -1,0 +1,10 @@
+# chose a base image
+FROM alpine
+
+#copy instructions from message and install 
+COPY message.txt /message.txt 
+RUN apk --no-cache add curl wget
+
+#define command to run app 
+CMD ["cat", "/message.txt"]
+
